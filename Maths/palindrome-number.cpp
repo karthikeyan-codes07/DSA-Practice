@@ -11,7 +11,7 @@ public:
         if(x<0){
             return false;
         }
-        int rev=0,temp;
+        long long rev=0,temp;
         int last;
         temp=x;
         while(x>0)
