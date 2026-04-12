@@ -1,14 +1,18 @@
-#include <iostream>
-using namespace std;
-
-int main() {
-    int arr[] = {1, 2, 3, 4, 5};
-    int sum = 0;
-
-    for(int i = 0; i < 5; i++) {
-        sum += arr[i];
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int n,i,j;
+        n=nums.size();
+        for(i=0;i<n;i++)
+        {
+            for(j=i+1;j<n;j++)
+            {
+                if(nums[i]+nums[j]==target)
+                {
+                    return {i,j};
+                }
+            }
+        }
+        return {};
     }
-
-    cout << "Sum = " << sum;
-    return 0;
-}
+};
